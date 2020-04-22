@@ -1,0 +1,10 @@
+com\Hooks\GenericHook.class
+com\Steps\PHPLoginSteps.class
+learning\WorkingWithFrames.class
+com\Runners\TestNGRunner.class
+com\Steps\WorkingWithDropdown.class
+com\Steps\WorkingWithWaits.class
+learning\MouseKeyboardActions.class
+com\Steps\WorkingWithAlerts.class
+com\Steps\CheckerToolSteps.class
+com\Steps\PHPRegisterSteps.class

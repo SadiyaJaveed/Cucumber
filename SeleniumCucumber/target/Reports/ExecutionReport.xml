@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="10.683">
+    <testcase classname="Practice cucumber concepts using PHP Travels website" name="ExampleTable" time="10.553">
+        <system-out><![CDATA[Given I have launched the PHP travels website "https://phptravels.org/".....passed
+When I click on Register button in login page...............................passed
+And enter the "firstname2" "lastname2" "firstname2.lastname2@test.com" "9876545678" "2" "streetaddress2" "city2" "Karnataka" "987654" "India" "Google" "9876545678" "test@2" "test@2" in the register page.passed
+And click on im not a robot.................................................passed
+When I click on Register button after entering the details..................passed
+Then I successfully land in the dashboard page..............................passed
+]]></system-out>
+    </testcase>
+</testsuite>
