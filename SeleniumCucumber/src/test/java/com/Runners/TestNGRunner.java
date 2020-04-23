@@ -4,13 +4,13 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-		features = { "src/test/java/com/Features/" }, 
+		features = { "src/test/java/com/Features/CucumberDataDriven.feature" }, 
 		glue = { "com.Steps", "com.Hooks" }, 
-		tags = {"@ExampleTable" },
-		// tags = {"not @DataTable"},
+		//tags = {"@ExampleTable" },
+		//tags = {"not @DataTable"},
 		// tags = {"@Parameters or @ExampleTable" and (not @DataTable)"},
-		// plugin = {"pretty", "html:target/Reports/AutomationReport" },
-		plugin = { "pretty", "json:target/Reports/AutomationReport.json" },
+		plugin = {"pretty", "html:target/Reports/TestNGxmlReport" },
+		//plugin = { "pretty", "json:target/Reports/AutomationReport.json" },
 		// plugin = {"pretty", "junit:target/Reports/ExecutionReport.xml" },
 		dryRun = false, monochrome = true)
 
