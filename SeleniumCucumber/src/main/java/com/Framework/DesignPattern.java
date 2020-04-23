@@ -48,16 +48,17 @@ public class DesignPattern {
 
 	/*
 	 * Shortcuts: ctrl+shift+o ---shortcut to resolve imports
-	 * rightclick>Refactor>Rename ---renames everywhere ctrl+space ---shortcut to
-	 * create constructor etc.. ctrl+shift+F ---shortcut to quick format F5
-	 * ---shortcut for refresh
+	 * rightclick>Refactor>Rename ---renames everywhere 
+	 * ctrl+space ---shortcut to create constructor etc.. 
+	 * ctrl+shift+F ---shortcut to quick format 
+	 * F5---shortcut for refresh
 	 */
 
 	/*
-	 * Maven build phases: 1. clean: cmd mvn clean ---this will clean the mvn
-	 * project and delete everything in target folder 2. complie: cmd mvn compile
-	 * ---this will start a fesh compilation 3. test: cmd mvn test ---this will run
-	 * the tests
+	 * Maven build phases: 
+	 * 1. clean: cmd mvn clean ---this will clean the mvn project and delete everything in target folder 
+	 * 2. complie: cmd mvn compile---this will start a fresh compilation 
+	 * 3. test: cmd mvn test ---this will run the tests
 	 */
 
 	/*
