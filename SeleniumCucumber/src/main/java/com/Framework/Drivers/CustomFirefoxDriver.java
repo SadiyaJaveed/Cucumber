@@ -2,6 +2,7 @@ package com.Framework.Drivers;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.CapabilityType;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -9,8 +10,7 @@ public class CustomFirefoxDriver {
 
 	@SuppressWarnings("unused")
 	private void setDriverExecutable() {
-		System.setProperty("webdriver.gecko.driver",
-				"C:\\Users\\IBM_ADMIN\\Selenium\\geckodriver-v0.26.0-win32\\geckodriver.exe\\");
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\sadiy\\Selenium\\geckodriver.exe");
 	}
 
 	private void setWebDriverManager() {
@@ -19,14 +19,15 @@ public class CustomFirefoxDriver {
 
 	private FirefoxOptions getFirefoxOptions() {
 		FirefoxOptions options = new FirefoxOptions();
-		options.addPreference("marionette", true);
-		options.setAcceptInsecureCerts(true);
+		//options.addPreference("marionette", true);
+		//options.setAcceptInsecureCerts(true);
+		options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 		return options;
 	}
 
 	public FirefoxDriver getFirefoxDriver() {
-		FirefoxOptions options = getFirefoxOptions();
 		setWebDriverManager();
+		FirefoxOptions options = getFirefoxOptions();
 		FirefoxDriver driver = new FirefoxDriver(options);
 		return driver;
 	}

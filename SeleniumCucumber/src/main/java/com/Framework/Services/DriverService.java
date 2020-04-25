@@ -3,9 +3,12 @@ package com.Framework.Services;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import com.Framework.Drivers.CustomChromeDriver;
+import com.Framework.Drivers.CustomEdgeDriver;
 import com.Framework.Drivers.CustomFirefoxDriver;
+import com.Framework.Drivers.CustomIEDriver;
 import com.Framework.Helpers.ActionsHelper;
 import com.Framework.Helpers.AlertHelper;
 import com.Framework.Helpers.BrowserHelper;
@@ -14,12 +17,17 @@ import com.Framework.Helpers.DropdownHelper;
 import com.Framework.Helpers.FrameHelper;
 import com.Framework.Helpers.ScreenshotHelper;
 import com.Framework.Helpers.TextBoxHelper;
+import com.Framework.Utilities.IReader;
+import com.Framework.Utilities.ReadConfigProperties;
 
 public class DriverService {
 
 	protected WebDriver driver;
+	private IReader reader;
 	private CustomChromeDriver customChromeDriver;
 	private CustomFirefoxDriver customFirefoxDriver;
+	private CustomIEDriver customIEDriver;
+	private CustomEdgeDriver customEdgeDriver;
 	private BrowserHelper browserHelper;
 	private TextBoxHelper textboxHelper;
 	private ButtonHelper buttonHelper;
@@ -33,6 +41,10 @@ public class DriverService {
 	public WebDriver getDriver() {
 		return driver;
 	}
+	
+	public IReader getReader() {
+		return reader;
+	}
 
 	public CustomChromeDriver getChromeDriver() {
 		return customChromeDriver;
@@ -40,6 +52,14 @@ public class DriverService {
 
 	public CustomFirefoxDriver getFirefoxDriver() {
 		return customFirefoxDriver;
+	}
+	
+	public CustomIEDriver getCustomIEDriver() {
+		return customIEDriver;
+	}
+
+	public CustomEdgeDriver getCustomEdgeDriver() {
+		return customEdgeDriver;
 	}
 
 	public BrowserHelper getBrowserHelper() {
@@ -81,11 +101,12 @@ public class DriverService {
 
 	// method to launch the browser as well as create the instance of helper classes
 	public void launchBrowser() {
-		customChromeDriver = new CustomChromeDriver();
-		driver = customChromeDriver.getChromeDriver();
-
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-
+		reader = new ReadConfigProperties();
+		//reader = new ReadConfigProperties("abc.properties");
+		
+		driver = getBrowserDriver();
+		driver.manage().timeouts().pageLoadTimeout(reader.getExplicitWait(), TimeUnit.SECONDS);
+		
 		browserHelper = BrowserHelper.getInstance(driver);
 		textboxHelper = TextBoxHelper.getInstance(driver);
 		buttonHelper = ButtonHelper.getInstance(driver);
@@ -95,6 +116,26 @@ public class DriverService {
 		frameHelper = FrameHelper.getInstance(driver);
 		screenshotHelper = ScreenshotHelper.getInstance(driver);
 		browserHelper.maximize();
+	}
+
+	//based on the browsertype specified in config.properties, launch the corresponding browser
+	private WebDriver getBrowserDriver() {
+		switch (reader.getBrowserType()) {
+		case BrowserType.CHROME:
+			customChromeDriver = new CustomChromeDriver();
+			return customChromeDriver.getChromeDriver();
+		case BrowserType.FIREFOX:
+			customFirefoxDriver = new CustomFirefoxDriver();
+			return customFirefoxDriver.getFirefoxDriver();
+		case BrowserType.IE:
+			customIEDriver = new CustomIEDriver();
+			return customIEDriver.getIEDriver();
+		case BrowserType.EDGE:
+			customEdgeDriver = new CustomEdgeDriver();
+			return customEdgeDriver.getEdgeDriver();
+		default:
+			throw new RuntimeException("Invalid browser type: " +reader.getBrowserType());
+		}
 	}
 
 }

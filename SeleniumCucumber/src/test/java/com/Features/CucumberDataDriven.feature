@@ -35,15 +35,16 @@ Scenario Outline: ExampleTable
 	Examples: 
 		|FirstName  |LastName  |EmailAddress                  |PhoneNumber |HouseNumber |StreetAddress  |City  |State     |Postcode |Country |FindUs |Mobile     |Password |ConfirmPassword| 
 		|firstname2 |lastname2 |firstname2.lastname2@test.com |9876545678  |2           |streetaddress2 |city2 |Karnataka |987654   |India   |Google |9876545678 |test@2   |test@2         |
-		#|firstname3 |lastname3 |firstname3.lastname3@test.com |9876545678  |2           |streetaddress2 |city2 |Karnataka |987654   |India   |Google |9876545678 |test@3   |test@3         |
-		#|firstname4 |lastname4 |firstname4.lastname4@test.com |9876545678  |2           |streetaddress2 |city2 |Karnataka |987654   |India   |Google |9876545678 |test@4   |test@4         |
-		#|firstname5 |lastname5 |firstname5.lastname5@test.com |9876545678  |2           |streetaddress2 |city2 |Karnataka |987654   |India   |Google |9876545678 |test@5   |test@5         |
+		|firstname3 |lastname3 |firstname3.lastname3@test.com |9876545678  |2           |streetaddress2 |city2 |Karnataka |987654   |India   |Google |9876545678 |test@3   |test@3         |
+		|firstname4 |lastname4 |firstname4.lastname4@test.com |9876545678  |2           |streetaddress2 |city2 |Karnataka |987654   |India   |Google |9876545678 |test@4   |test@4         |
+		|firstname5 |lastname5 |firstname5.lastname5@test.com |9876545678  |2           |streetaddress2 |city2 |Karnataka |987654   |India   |Google |9876545678 |test@5   |test@5         |
 
 @DataTable	
 Scenario: DataTable
 	When I click on Register button in login page 
 	And enter the following details in the register page 
-	|firstname |lastname |
+	|FirstName    |LastName     |
+	|firstnameSad |lastnameJav  |
 	And click on im not a robot 
 	When I click on Register button after entering the details 
 	Then I successfully land in the dashboard page 

@@ -9,12 +9,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class PHPLoginSteps {
+public class DataDrivenParametersSteps {
 
 	protected WebDriver driver;
 	private DriverService service;
 
-	public PHPLoginSteps(DriverService service) {
+	public DataDrivenParametersSteps(DriverService service) {
 		this.service = service;
 		this.driver = service.getDriver();
 	}

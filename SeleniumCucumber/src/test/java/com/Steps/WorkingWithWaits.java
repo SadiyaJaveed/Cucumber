@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.Framework.Services.DriverService;
+import com.Framework.Utilities.IReader;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -20,20 +21,22 @@ public class WorkingWithWaits {
 
 	protected WebDriver driver;
 	private DriverService service;
+	private IReader readconfig;
 
 	public WorkingWithWaits(DriverService service) {
 		this.service = service;
 		this.driver = service.getDriver();
-	}
+		this.readconfig = service.getReader();
+		}
 
 	@Given("I navigate to the website {string}")
 	public void i_navigate_to_the_website(String url) {
-		service.getBrowserHelper().navigateTo(url);
+		service.getBrowserHelper().navigateTo(readconfig.getUrl());
 	}
 
 	@When("I provide the username as {string} and click Next button")
 	public void i_provide_the_username_as_and_click_Next_button(String username) {
-		service.getTextboxHelper().setText(By.id("login-username"), username);
+		service.getTextboxHelper().setText(By.id("login-username"), readconfig.getUsername());
 		service.getButtonHelper().performClick(By.id("login-signin"));
 	}
 
@@ -63,14 +66,14 @@ public class WorkingWithWaits {
 		 * Can use already present wait logic by using ExpectedConditions Can create
 		 * custom wait logic and call the method
 		 */
-		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		WebDriverWait wait = new WebDriverWait(driver, readconfig.getExplicitWait());
 		wait.ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login-passwd")));
 	}
 
 	@When("provide the password as {string} and click SignIn button")
 	public void provide_the_password_as_and_click_SignIn_button(String password) {
-		service.getTextboxHelper().setText(By.id("login-passwd"), password);
+		service.getTextboxHelper().setText(By.id("login-passwd"), readconfig.getPassword());
 		service.getButtonHelper().performClick(By.id("login-signin"));
 	}
 

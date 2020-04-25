@@ -2,6 +2,7 @@ package com.Framework.Drivers;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -9,8 +10,7 @@ public class CustomChromeDriver {
 
 	@SuppressWarnings("unused")
 	private void setDriverExecutable() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\IBM_ADMIN\\Selenium\\Chrome Driver\\chromedriver_win32\\chromedriver.exe\\");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sadiy\\Selenium\\chromedriver.exe");
 	}
 
 	private void setWebDriverManager() {
@@ -19,17 +19,17 @@ public class CustomChromeDriver {
 
 	private ChromeOptions getChromeOptions() {
 		ChromeOptions options = new ChromeOptions();
-		options.setAcceptInsecureCerts(true);
+		//options.setAcceptInsecureCerts(true);
+		options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 		options.setHeadless(false);
 		return options;
 	}
 
 	public ChromeDriver getChromeDriver() {
-		ChromeOptions options = getChromeOptions();
 		setWebDriverManager();
+		ChromeOptions options = getChromeOptions();
 		ChromeDriver driver = new ChromeDriver(options);
 		return driver;
-
 	}
 
 }

@@ -1,22 +1,19 @@
 package com.Steps;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.Framework.Services.DriverService;
 
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class PHPRegisterSteps {
+public class DataDrivenExampleTableSteps {
 
 	protected WebDriver driver;
 	private DriverService service;
 
-	public PHPRegisterSteps(DriverService service) {
+	public DataDrivenExampleTableSteps(DriverService service) {
 		this.service = service;
 		this.driver = service.getDriver();
 	}
@@ -44,14 +41,6 @@ public class PHPRegisterSteps {
 		service.getTextboxHelper().setText(By.id("customfield2"), Mobile);
 		service.getTextboxHelper().setText(By.id("inputNewPassword1"), Password);
 		service.getTextboxHelper().setText(By.id("inputNewPassword2"), ConfirmPassword);
-	}
-
-	@When("enter the following details in the register page")
-	public void enter_the_following_details_in_the_register_page(DataTable dataTable) {
-		List<String> list = dataTable.asList(String.class);
-		driver.findElement(By.name("firstname")).sendKeys(list.get(0));
-		driver.findElement(By.name("lastname")).sendKeys(list.get(1));
-		driver.findElement(By.name("email")).sendKeys(list.get(2));
 	}
 
 	@When("click on im not a robot")
