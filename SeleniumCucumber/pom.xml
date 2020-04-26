@@ -112,6 +112,20 @@
 			<version>2.6</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>4.1.2</version>
+</dependency>
+		
+
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -185,18 +199,12 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M4</version>
-				<executions>
-					<execution>
-						<id>testngtest</id>
-						<phase>test</phase>
-					</execution>
-				</executions>
 				<configuration>
 					<forkCount>3</forkCount>
 					<reuseForks>false</reuseForks>
 					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
-						<include>TestNGRunner.java</include>
+						<include>**/*Runner.java</include>
 					</includes>
 				</configuration>
 			</plugin>
@@ -213,9 +221,12 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>NHSExercise</projectName>
-							<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
-							<inputDirectory>${project.build.directory}/cucumber.json</inputDirectory>
+							<projectName>SeleniumCucumber</projectName>
+							<outputDirectory>${project.build.directory}/parallel-report</outputDirectory>
+							<inputDirectory>${project.build.directory}</inputDirectory>
+							<jsonFiles>
+                                <param>**/*.json</param>
+                            </jsonFiles>
 						</configuration>
 					</execution>
 				</executions>

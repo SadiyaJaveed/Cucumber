@@ -81,8 +81,7 @@ public class WorkingWithWaits {
 	public void i_land_in_the_homepage_of(String myIDname) {
 		Assert.assertTrue(service.getBrowserHelper().fetchTitle().contains(myIDname));
 
-		service.getButtonHelper().performClick(By.cssSelector("button[title='Tickbox, not ticked']")); // to click on
-																										// checkbox
+		service.getButtonHelper().performClick(By.cssSelector("button[title='Tickbox, not ticked']"));
 
 		service.getButtonHelper().performClick(By.cssSelector("button[title='Select messages']"));
 		service.getButtonHelper().performClick(By.linkText("Starred"));

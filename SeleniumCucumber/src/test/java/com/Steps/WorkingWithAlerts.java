@@ -25,9 +25,8 @@ public class WorkingWithAlerts {
 	}
 
 	@When("I click on the Alert")
-	public void i_click_on_the_Alert() throws InterruptedException {
+	public void i_click_on_the_Alert() {
 		service.getButtonHelper().performClick(By.name("alert"));
-		Thread.sleep(4000);
 	}
 
 	@Then("I switch the control to alert and accept the alert")
@@ -36,9 +35,8 @@ public class WorkingWithAlerts {
 	}
 
 	@When("I click on the Confirmation Box")
-	public void i_click_on_the_Confirmation_Box() throws InterruptedException {
+	public void i_click_on_the_Confirmation_Box() {
 		service.getButtonHelper().performClick(By.name("confirmation"));
-		Thread.sleep(4000);
 	}
 
 	@Then("I switch the control to alert and dismiss the alert")
@@ -47,9 +45,8 @@ public class WorkingWithAlerts {
 	}
 
 	@When("I click on the Prompt")
-	public void i_click_on_the_Prompt() throws InterruptedException {
+	public void i_click_on_the_Prompt() {
 		service.getButtonHelper().performClick(By.name("prompt"));
-		Thread.sleep(4000);
 	}
 
 	@Then("I switch the control to alert and type in the alert and accept the alert")

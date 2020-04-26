@@ -4,12 +4,11 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-		features = { "src/test/java/com/Features" }, 
-		glue = { "com.Steps", "com.Hooks" }, 
-		tags = {"@DataTable" },
+		features = { "src/test/java/com/Features/WorkingWithDropdown.feature" ,  "src/test/java/com/Features/WorkingWithAlerts.feature"}, 
+		glue = { "com.Steps", "com.Hooks" },
 		//tags = {"not @DataTable"},
 		// tags = {"@Parameters or @ExampleTable" and (not @DataTable)"},
-		plugin = {"pretty", "html:target/Reports/FreshReport" },
+		plugin = {"json:target/dropdown.json" },
 		//plugin = { "pretty", "json:target/Reports/AutomationReport.json" },
 		// plugin = {"pretty", "junit:target/Reports/ExecutionReport.xml" },
 		dryRun = false, monochrome = true)

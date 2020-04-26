@@ -4,7 +4,8 @@
   <test thread-count="2" parallel="classes" name="CucumberTests">
     <classes>
       <class name="com.Runners.TestNGRunner"/>
-      <class name="com.Runners.Runner2"></class>
+      <class name="com.Runners.DataDrivenRunner"/>
+      <class name="com.Runners.WaitsRunner"/>
     </classes>
   </test> <!-- CucumberTests -->
 </suite> <!-- CucumberTestSuite -->
