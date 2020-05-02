@@ -1,0 +1,7 @@
+	 * Shortcuts: 
+	 * ctrl+shift+o ---shortcut to resolve imports
+	 * ctrl+shift+F ---shortcut to quick format 
+	 * ctrl+space ---shortcut for all the suggestions
+	 * ctrl+o ---shortcut to navigate between methods and variables
+	 * rightclick>Refactor>Rename ---renames everywhere 
+	 * F5---shortcut for refresh

@@ -28,7 +28,6 @@ Scenario: Parameterisation
 Scenario Outline: ExampleTable
 	When I click on Register button in login page 
 	And enter the "<FirstName>" "<LastName>" "<EmailAddress>" "<PhoneNumber>" "<HouseNumber>" "<StreetAddress>" "<City>" "<State>" "<Postcode>" "<Country>" "<FindUs>" "<Mobile>" "<Password>" "<ConfirmPassword>" in the register page 
-	And click on im not a robot 
 	When I click on Register button after entering the details 
 	Then I successfully land in the dashboard page 
 	
@@ -45,6 +44,5 @@ Scenario: DataTable
 	And enter the following details in the register page 
 	|FirstName    |LastName     |
 	|firstnameSad |lastnameJav  |
-	And click on im not a robot 
 	When I click on Register button after entering the details 
 	Then I successfully land in the dashboard page 

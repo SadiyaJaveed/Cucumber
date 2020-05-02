@@ -1,0 +1,9 @@
+Page Object Model(POM) class: 
+
+1. For every WebPage in UI create a mapping class in framework ie., Page class 
+2. This class is divided in 3 sections:
+		WebElements: to uniquely identify elements in the page 
+		Actions: to perform actions on those web elements 
+		Navigation: to navigate to the next page based on the action performed 
+3. Use PageFactory to initialize webelements in the page 
+4. Navigate among the pages via creating objects of the page classes

@@ -24,6 +24,7 @@ public class DataDrivenDataTableSteps {
 	@When("enter the following details in the register page")
 	public void enter_the_following_details_in_the_register_page(DataTable table) {
 		/*
+		 * DataTable to List Data Structure:
 		 * Cucumber converts the table into a list of lists by treating each row as a list of the column values. 
 		 * We use the asLists method — supplying a String.class argument — to convert the DataTable argument to a List<List<String>>
 		 * This Class argument informs the asLists method what data type we expect each element to be.
@@ -38,6 +39,7 @@ public class DataDrivenDataTableSteps {
 	    }*/
 	    
 	    /*
+	     * DataTable to Map Data Structure:
 	     * Similar to the above, Cucumber creates a list containing each row but instead maps the column heading to each column value. 
 	     * Cucumber repeats this process for each subsequent row
 	     * We use the asMaps method — supplying two String.class arguments — to convert the DataTable argument to a List<Map<String, String>> 

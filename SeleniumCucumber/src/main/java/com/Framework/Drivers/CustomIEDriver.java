@@ -1,5 +1,6 @@
 package com.Framework.Drivers;
 
+import org.openqa.selenium.ie.ElementScrollBehavior;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 
@@ -13,6 +14,10 @@ public class CustomIEDriver {
 	
 	private InternetExplorerOptions getInternetExplorerOptions() {
 		InternetExplorerOptions options = new InternetExplorerOptions();
+		options.destructivelyEnsureCleanSession();
+		options.ignoreZoomSettings();
+		options.introduceFlakinessByIgnoringSecurityDomains();
+		options.elementScrollTo(ElementScrollBehavior.BOTTOM);
 		return options;
 	}
 	

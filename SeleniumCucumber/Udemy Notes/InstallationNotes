@@ -1,0 +1,25 @@
+Setting up the environment:
+
+1. Download and Install 64 bit JDK (this will automatically install JRE as well)
+
+2. Set up environment variable:
+	a. Create new system variable JAVA_HOME and point to the JDK location (C:\Program Files\Java\jdk-14.0.1)
+	b. Edit the path variable and add %JAVA_HOME%\bin
+	c. Check for successful installation with the commands (cmd: javac -version) (cmd: java -version)
+	
+3. Download and Install the latest Eclipse flavour
+
+4. Download Maven (binary zip archive) and save it somewhere in Program files
+
+5. Set up environment variable:
+	a. Create new system variable MVN_HOME and point to the Maven location (C:\Program Files\Maven\apache-maven-3.6.3)
+	b. Edit the path variable and add %MVN_HOME%\bin
+	c. Check for successful installation with the command (cmd: mvn -version)
+	
+6. Install the TestNG plugin for Eclipse (Install new software-> "https://dl.bintray.com/testng-team/testng-eclipse-release/")
+
+7. Install the cucumber plugins from Eclipse Marketplace (search for Cucumber and install the 2 plugins)
+
+8. Create Maven project (maven.archtype.quickstart) (groupID:CucumberAutomation, artifactID:CucumberProject) and remove the dummy files. 
+
+9. Add the cucumber dependencies in pom.xml by picking up latest jars from Maven Repository

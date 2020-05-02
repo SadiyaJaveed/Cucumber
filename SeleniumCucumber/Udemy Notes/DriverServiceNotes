@@ -1,0 +1,7 @@
+Driver Service Class:
+ 
+1. This class will have the code for launching the browser as well as creating the instance of Helper class 
+2. We will create getter Methods that will return different helper instance 
+3. This class will be injected in the Hook class as well as StepDfn class (using Dependency Injection) 
+4. In the Hook class we will use the injected object for closing the webdriver 
+5. In the Stepdfn class we will use the injected object for performing actions

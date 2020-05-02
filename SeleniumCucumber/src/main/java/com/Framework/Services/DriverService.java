@@ -14,7 +14,7 @@ import com.Framework.Helpers.AlertHelper;
 import com.Framework.Helpers.BrowserHelper;
 import com.Framework.Helpers.ButtonHelper;
 import com.Framework.Helpers.DropdownHelper;
-import com.Framework.Helpers.FrameHelper;
+import com.Framework.Helpers.WindowHelper;
 import com.Framework.Helpers.ScreenshotHelper;
 import com.Framework.Helpers.TextBoxHelper;
 import com.Framework.Utilities.IReader;
@@ -35,7 +35,7 @@ public class DriverService {
 	private DropdownHelper dropdownHelper;
 	private AlertHelper alertHelper;
 	private ScreenshotHelper screenshotHelper;
-	private FrameHelper frameHelper;
+	private WindowHelper frameHelper;
 
 	// getter methods to return the instance of individual helper classes
 	public WebDriver getDriver() {
@@ -86,7 +86,7 @@ public class DriverService {
 		return alertHelper;
 	}
 
-	public FrameHelper getFrameHelper() {
+	public WindowHelper getFrameHelper() {
 		return frameHelper;
 	}
 
@@ -113,7 +113,7 @@ public class DriverService {
 		actionHelper = ActionsHelper.getInstance(driver);
 		dropdownHelper = DropdownHelper.getInstance(driver);
 		alertHelper = AlertHelper.getInstance(driver);
-		frameHelper = FrameHelper.getInstance(driver);
+		frameHelper = WindowHelper.getInstance(driver);
 		screenshotHelper = ScreenshotHelper.getInstance(driver);
 		browserHelper.maximize();
 	}

@@ -28,8 +28,7 @@ public class AlertHelper {
 
 	public void acceptAlert() {
 		WebDriverWait wait = getWait();
-		Alert alert = wait.until(ExpectedConditions.alertIsPresent()); // this will wait until alert is present and
-																		// switch the control to alert
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent()); // this will wait until alert is present and switch the control to alert
 		alert.accept();
 	}
 

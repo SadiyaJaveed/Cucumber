@@ -36,8 +36,7 @@ public class ActionsHelper {
 
 	public void performKeyboardAction(By locator, String value) {
 		Actions action = new Actions(Driver);
-		action.keyDown(Driver.findElement(locator), Keys.LEFT_SHIFT).sendKeys(value).keyUp(Keys.LEFT_SHIFT).build()
-				.perform();
+		action.keyDown(Driver.findElement(locator), Keys.LEFT_SHIFT).sendKeys(value).keyUp(Keys.LEFT_SHIFT).build().perform();
 	}
 
 }

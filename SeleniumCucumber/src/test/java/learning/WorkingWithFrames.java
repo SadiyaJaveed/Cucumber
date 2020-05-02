@@ -22,15 +22,19 @@ public class WorkingWithFrames {
 		browserHelper = BrowserHelper.getInstance(driver);
 		browserHelper.navigateTo("https://www.selenium.dev/selenium/docs/api/java/index.html");
 		browserHelper.maximize();
+		System.out.println(driver.getTitle());
 
 		driver.switchTo().frame("classFrame");
+		System.out.println(driver.getTitle());
 
 		buttonHelper = ButtonHelper.getInstance(driver);
 		buttonHelper.performClick(By.xpath("/html/body/div[3]/table/tbody[2]/tr[1]/td[1]/a"));
 
 		driver.switchTo().defaultContent();
+		System.out.println(driver.getTitle());
 
 		driver.switchTo().frame("packageFrame");
+		System.out.println(driver.getTitle());
 		buttonHelper.performClick(By.xpath("/html/body/div/ul/li[12]/a"));
 
 		browserHelper.closebrowser();

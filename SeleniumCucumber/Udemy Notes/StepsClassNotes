@@ -1,0 +1,26 @@
+1. Dependency Injection concept has been used in the step definition classes
+2. The type of dependency injection implemented is "Constructor Injection"
+
+Usually when a class has dependency on base class then, 
+Object of the base class needs to be created in the dependent class to inherit the variables and methods from base class.
+
+In cucumber this is done using picocontainer 
+picocontainer will automatically create object of the base class and provide it to the dependent class.
+
+In this process, if the stepdfn class has a dependency on the base class (DriverService) then,
+Constructor needs to be created in stepdfn class to inherit the variables and methods from base class.
+
+Process:
+1. Create reference variables in the dependent class
+2. Initialize those reference variables via constructor
+
+Example:
+	protected WebDriver driver;
+	private DriverService service;
+	private IReader readconfig;
+
+	public WorkingWithWaits(DriverService service) {
+		this.service = service;
+		this.driver = service.getDriver();
+		this.readconfig = service.getReader();
+		}

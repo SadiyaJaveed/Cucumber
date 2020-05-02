@@ -43,15 +43,8 @@ public class DataDrivenExampleTableSteps {
 		service.getTextboxHelper().setText(By.id("inputNewPassword2"), ConfirmPassword);
 	}
 
-	@When("click on im not a robot")
-	public void click_on_im_not_a_robot() {
-		service.getFrameHelper().switchToFrame(By.xpath("//*[@id=\"divDynamicRecaptcha\"]/div/div/iframe"));
-		service.getButtonHelper().performClick(By.xpath("//*[@id=\"recaptcha-anchor\"]"));
-	}
-
 	@When("I click on Register button after entering the details")
 	public void i_click_on_Register_button_after_entering_the_details() {
-		service.getFrameHelper().switchToDefault();
 		service.getButtonHelper().performClick(By.xpath("//*[@id=\"frmCheckout\"]/p/input"));
 	}
 

@@ -60,11 +60,11 @@ public class WorkingWithWaits {
 	public void i_set_the_explicit_wait_to_seconds(Integer timeout) {
 		/*
 		 * Create the instance of WebDriverWait class by passing driver and maxduration
-		 * Provide the exception that we want to ignore Call the until() method with
-		 * wait logic
+		 * Provide the exception that we want to ignore 
+		 * Call the until() method with wait logic
 		 * 
-		 * Can use already present wait logic by using ExpectedConditions Can create
-		 * custom wait logic and call the method
+		 * Can use already present wait logic by using ExpectedConditions 
+		 * Can create custom wait logic and call the method
 		 */
 		WebDriverWait wait = new WebDriverWait(driver, readconfig.getExplicitWait());
 		wait.ignoring(NoSuchElementException.class);

@@ -1,0 +1,25 @@
+Preconditions:
+1. Add (testng) and (cucumber-testng) dependencies in pom.xml
+2. Install Testng plugin for eclipse via marketplace
+3. Create a package for runners and create TestNG runner that extends from AbstractTestNGCucumberTests
+4. Make sure to only import TestNG libraries 
+
+1. features: to define the feature file path (provide the "path of the Package")
+
+2. glue: to define the step definition package (provide the "name of the Package" )
+
+3. tags: to specify the tags to be run 
+		add tag expressions dependency in pom.xml and use 'and' , 'or' , 'not' to run multiple tags
+		Example: tags = {"@Parameters or @ExampleTable" and (not @DataTable)"}
+		
+4. plugin: to generate reports
+		3 types of reports can be generated
+			1. html: plugin = { "pretty", "html:target/Reports/AutomationReport" } 
+			2. json: plugin = { "pretty", "json:target/Reports/AutomationReport.json" } 
+			3. junit: plugin = {"pretty", "junit:target/Reports/AutomationReport.xml" } 
+			
+5. dryRun: to scan for missing implementations without running the tests 
+
+6. monochrome: to avoid unwanted characters in output 
+
+7. strict: to run in strict mode ie., if anything wrong in the program or missing steps then everything will fail and nothing will be executed

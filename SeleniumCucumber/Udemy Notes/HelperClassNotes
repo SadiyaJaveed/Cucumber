@@ -1,0 +1,9 @@
+Helper Class:
+
+Singleton design pattern is used in this framework to create helpers 
+
+1. Create private variables		 
+2. Create a private Constructor
+		Constructor should be private-so that no other class can create object of this class		
+3. Create a getInstance() method which will give the object of this class 		
+4. Create custom methods to perform actions
