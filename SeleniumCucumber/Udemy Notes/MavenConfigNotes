@@ -3,18 +3,13 @@ Maven build phases:
 2. compile: (cmd: mvn compile) this will start a fresh compilation 
 3. test: (cmd: mvn test) this will run the tests
 
-
-
-
-
-
-	/*
-	 * Parallel execution using Maven: Tests and runner need to be present in
-	 * src/test/java tests will run parallely in different sessions but on same
-	 * browser type add the configuration in maven-surefire-plugin in pom.xml 1.
-	 * forkCount - Number of VM to create and run in parallel 2. reuseForks - true:
-	 * use any VM that is up for the test false: create a new VM for every test 3.
-	 * testFailureIgnore - true: continue the execution despote of failure false:
-	 * stop the execution if a test failed 4. includes - to specify the
-	 * filename(runner file)
-	 */
+Parallel execution using Maven: 
+* Tests and runner need to be present in src/test/java 
+* Tests will run parallely in different sessions but on same browser type 
+* Add the configuration in maven-surefire-plugin in pom.xml 
+		1. forkCount - Number of VM to create and run in parallel 
+		2. reuseForks - true: use any VM that is up for the test 
+						false: create a new VM for every test 
+		3. testFailureIgnore - true: continue the execution despote of failure 
+								false: stop the execution if a test failed 
+		4. includes - to specify the filename (runner file)

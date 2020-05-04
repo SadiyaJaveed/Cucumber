@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>TestNG:  CucumberTests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>CucumberTests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon May 04 18:48:31 BST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>17 seconds (17445 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Runners.CheckerRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runners.CheckerRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Start Functionality", "Test the functionality of NHS Costs Checker Tool with various postitive and negative scenarios"</td>
+<td></td>
+<td>8</td>
+<td>com.Runners.CheckerRunner@61230f6a</td></tr>
+<tr>
+<td title='com.Runners.DataDrivenRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runners.DataDrivenRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "DataTable", "Practice cucumber concepts using PHP Travels website"</td>
+<td></td>
+<td>9</td>
+<td>com.Runners.DataDrivenRunner@3c130745</td></tr>
+<tr>
+<td title='com.Runners.WaitsRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runners.WaitsRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Explicit wait - using WebDriverWait class", "Working with WebDriver Synchronization and waits"</td>
+<td></td>
+<td>17</td>
+<td>com.Runners.WaitsRunner@cd3fee8</td></tr>
+</table><p>
+</body>
+</html>

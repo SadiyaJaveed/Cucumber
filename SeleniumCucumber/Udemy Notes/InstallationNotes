@@ -20,6 +20,9 @@ Setting up the environment:
 
 7. Install the cucumber plugins from Eclipse Marketplace (search for Cucumber and install the 2 plugins)
 
-8. Create Maven project (maven.archtype.quickstart) (groupID:CucumberAutomation, artifactID:CucumberProject) and remove the dummy files. 
-
-9. Add the cucumber dependencies in pom.xml by picking up latest jars from Maven Repository
+8. Create Maven project (maven.archtype.quickstart) (groupID:CucumberAutomation, artifactID:CucumberProject) and remove the dummy files.
+		Configure the build path to add the latest JDK library present in the system 
+		Add the cucumber dependencies in pom.xml by picking up latest jars from Maven Repository
+		Update Project
+		Convert to Cucumber Project
+		Convert to TestNG

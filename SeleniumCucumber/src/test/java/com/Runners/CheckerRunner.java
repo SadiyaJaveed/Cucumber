@@ -5,6 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		features = { "src/test/java/com/Features/CheckerTool.feature" }, 
+		tags = {"@Smoke"},
 		glue = { "com.Steps", "com.Hooks" }, 
 		plugin = {"json:target/checker.json" },
 		dryRun = false, monochrome = true)
