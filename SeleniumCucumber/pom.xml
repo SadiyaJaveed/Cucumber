@@ -202,7 +202,7 @@
 					<reuseForks>false</reuseForks>
 					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
-						<include>**/*Runner.java</include>
+						<include>$(runner.name)</include>
 					</includes>
 				</configuration>
 			</plugin>

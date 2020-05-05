@@ -1,14 +1,31 @@
+***IMPLEMENTED***
+	Read properties file
+	Helper classes
+	Custom browsers
+	Driver service class
+	Hooks and screenshots
+	Page Object Model
+	Custom Factory
+	Datatable concept
+	Example table concept
+	Parallel from pom.xml
+	Parallel from testng.xml
+	Advanced report generation
+	Execution from command line
+	Push code to Github
+	Execution from Jenkins
+
+
 ***PENDING***
 	 * Sharing test data across multiple stepdefinitions
 	 (this is applicable to cases where stepdfn is spread across multiple files,
 	 but its recommended approach to keep the stepdfn of a scenario in same file)
-	 
-	 
-***IGNORED***
 	 * Custom TestNG Runner (v4.x topics)
 	 * Data driven using excel file in Cucumber
 	 * Extent Report Integration
 	 
+	 
+***IGNORED***
 	 * Step Argument Transform using Transformer (deprecated)
 	 * TypeRegistryConfigurer (deprecated)
 	 * Class Loader Concept (alternative is WebDriverManager)
