@@ -12,4 +12,6 @@ Parallel execution using Maven:
 						false: create a new VM for every test 
 		3. testFailureIgnore - true: continue the execution despote of failure 
 								false: stop the execution if a test failed 
-		4. includes - to specify the filename (runner file)
+		4. includes - to specify the runner file
+			Example: **/*Runner.java (picks up all the runners that end with name Runner.java)
+			Example: ${runner.name} (this property value can be specified in Jenkins to include specific runners)
